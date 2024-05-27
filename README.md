@@ -67,7 +67,7 @@ For this exercise, we use these data from the 'data' file:
     'test.it-en.it'
     'test.it-en.en'
 
-Then, We subsampled the parallel training data to 100k sentence pairs: 
+Then, we subsampled the parallel training data to 100k sentence pairs: 
     
     from 'train.it-en.it' to 'train.it'
     from 'train.it-en.en' to 'train.en'
@@ -97,15 +97,15 @@ Consequently, the six data used for training are stored in the file 'sampled_dat
 
 Before training, some modifications are made:
 
-The script 'train.sh' in the file 'scripts' is modified. 
+- The script 'train.sh' in the file 'scripts' is modified. 
 
-In the file 'configs', the 'transformer_sample_config.yaml' has been modified into three config files -- 'transformer_a.yaml', 'transformer_b.yaml' and 'transformer_c.yaml'. We use a vocabulary size of 5000 in experiment (c). 
+- In the file 'configs', the 'transformer_sample_config.yaml' has been modified into three config files -- 'transformer_a.yaml', 'transformer_b.yaml' and 'transformer_c.yaml'. We use a vocabulary size of 5000 in experiment (c). 
+
+- For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment(c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
 
 Make sure subword-nmt is installed on your system. To install, e.g.
 
     pip install subword-nmt
-
-For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment(c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
 
 Train a model ('model_name' to be replaced by the real model name, choices are 'transformer_a', 'transformer_b', or 'transformer_c') :
 
