@@ -2,7 +2,7 @@
 
 This repo is a collection of scripts showing how our group members train the models and evaluate the results for MT exercise 5. 
 
-# Group Members:
+## Group Members:
 
 Mengjie Wu (22-747-869)
 Ruomeng Xu (22-748-339)
@@ -15,7 +15,7 @@ Ruomeng Xu (22-748-339)
 
     `pip install virtualenv`
 
-### Task 1
+## Task 1
 
 Clone the fork of this repository in the desired place:
 
@@ -127,7 +127,7 @@ Then we can get the BLEU scores of three experiments. The summarizing table of t
 
 **Important**:Other findings of Task 1 are discussed in the PDF file. (/menwu_moieaso_mt_exercise_05.pdf)
 
-# Task 2
+## Task 2
 
 By comparing the BLEU scores, we can see that transformer_c is the best model trained in Task 1. We use '/models/transformer_c/best.ckpt' as our model in Task 2. 
 
