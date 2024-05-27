@@ -101,7 +101,7 @@ Before training, some modifications are made:
 
 - In the file 'configs', the 'transformer_sample_config.yaml' has been modified into three config files -- 'transformer_a.yaml', 'transformer_b.yaml' and 'transformer_c.yaml'. We use a vocabulary size of 5000 in experiment (c). 
 
-- For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment(c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
+- For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment (c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
 
 Make sure subword-nmt is installed on your system. To install, e.g.
 
