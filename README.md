@@ -23,6 +23,8 @@ Clone the fork of this repository in the desired place:
 
     git clone https://github.com/momoieaso/mt-exercise-5.git
 
+    cd mt-exercise-5
+
 Create a new virtualenv that uses Python 3.10. Please make sure to run this command outside of any virtual Python environment:
 
     ./scripts/make_virtualenv.sh
@@ -32,6 +34,8 @@ Create a new virtualenv that uses Python 3.10. Please make sure to run this comm
     source ./scripts/../venvs/torch3/bin/activate
 
 Download and install required software as described in the exercise pdf.
+
+    cd ..
 
 - Install joeynmt as the requirements in exercise 4
 
@@ -49,6 +53,7 @@ Download and install required software as described in the exercise pdf.
 
 Download data:
 
+    cd ..
     cd mt-exercise-5
 
     ./scripts/download_iwslt_2017_data.sh
@@ -130,7 +135,7 @@ By comparing the BLEU scores, we can see that transformer_c is the best model tr
 
 Before excuting the next step, make sure jq is installed on your system, in order to get the BLEU scores from the json formatted bleu outputs. To install, e.g. 
 
-    sudo apt-get install jq
+    pip install jq
 
 To translate with 10 different beam sizes, the script 'evaluate_beam_size.sh' is created by modifying from the script 'evaluate.sh'. We use 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 as the ten different beam sizes. 
 
