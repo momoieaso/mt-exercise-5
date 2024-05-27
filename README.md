@@ -35,9 +35,9 @@ Create a new virtualenv that uses Python 3.10. Please make sure to run this comm
 
 Download and install required software as described in the exercise pdf.
 
-    cd ..
+Install joeynmt as the requirements in exercise 4
 
-- Install joeynmt as the requirements in exercise 4
+    cd ..
 
     git clone https://github.com/momoieaso/joeynmt.git
 
@@ -47,7 +47,7 @@ Download and install required software as described in the exercise pdf.
     pip install torch==1.13.1
     pip install -e .
 
-- Make sure sacremoses is installed on your system. To install, e.g.
+Make sure sacremoses is installed on your system. To install, e.g.
 
     pip install sacremoses
 
@@ -99,25 +99,25 @@ Consequently, the six data used for training are stored in the file 'sampled_dat
 
 Before training, some modifications are made:
 
-- The script 'train.sh' in the file 'scripts' is modified. 
+The script 'train.sh' in the file 'scripts' is modified. 
 
-- In the file 'configs', the 'transformer_sample_config.yaml' has been modified into three config files -- 'transformer_a.yaml', 'transformer_b.yaml' and 'transformer_c.yaml'. We use a vocabulary size of 5000 in experiment (c). 
+In the file 'configs', the 'transformer_sample_config.yaml' has been modified into three config files -- 'transformer_a.yaml', 'transformer_b.yaml' and 'transformer_c.yaml'. We use a vocabulary size of 5000 in experiment (c). 
 
-- Make sure subword-nmt is installed on your system. To install, e.g.
+Make sure subword-nmt is installed on your system. To install, e.g.
 
     pip install subword-nmt
 
-- For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment(c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
+For the BPE-level JoeyNMT model, the models 'bpe2000.codes' for experiment (b) and 'bpe5000.codes' for experiment(c) are learned from the 'train.it' and 'train.en'. Then the models are applied to create the corresponding vocabulary lists 'bpe2000.txt' and 'bpe5000.txt'. The vocabulary counts in the vocabulary lists are removed using the '/script/remove_vocab_counts.py'. The two codes and two joint vocabulary files are also stored in the file 'sampled_data'. 
 
-Train a model:
+Train a model ('model_name' to be replaced by the real model name, choices are 'transformer_a', 'transformer_b', or 'transformer_c') :
 
-    ./scripts/train.sh 'model_name' ('model_name' to be replaced by the real model name, choices are 'transformer_a', 'transformer_b', or 'transformer_c') 
+    ./scripts/train.sh 'model_name'
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
-Evaluate a trained model with: 
+Evaluate a trained model with ('model_name' to be replaced by the real model name, choices are 'transformer_a', 'transformer_b', or 'transformer_c') : 
 
-    ./scripts/evaluate.sh 'model_name' ('model_name' to be replaced by the real model name, choices are 'transformer_a', 'transformer_b', or 'transformer_c')
+    ./scripts/evaluate.sh 'model_name'
 
 Then we can get the BLEU scores of three experiments. The summarizing table of the BLEU of experiments (a), (b) and (c) is as follows: 
 
