@@ -8,7 +8,7 @@ configs=$base/configs
 
 mkdir -p $models
 
-num_threads=4
+num_threads=6
 
 # measure time
 
@@ -16,7 +16,7 @@ SECONDS=0
 
 logs=$base/logs
 
-model_name=?
+model_name=$1
 
 mkdir -p $logs
 

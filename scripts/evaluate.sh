@@ -10,18 +10,18 @@ translations=$base/translations
 
 mkdir -p $translations
 
-src=?
-trg=?
+src=it
+trg=en
 
 
-num_threads=4
+num_threads=6
 device=0
 
 # measure time
 
 SECONDS=0
 
-model_name=?
+model_name=$1
 
 echo "###############################################################################"
 echo "model_name $model_name"
