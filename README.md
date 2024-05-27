@@ -33,7 +33,7 @@ Create a new virtualenv that uses Python 3.10. Please make sure to run this comm
 
 Download and install required software as described in the exercise pdf.
 
-Install joeynmt as the requirements in exercise 4
+Install joeynmt as the requirements in exercise 4: 
 
     cd ..
 
