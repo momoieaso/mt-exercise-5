@@ -2,8 +2,7 @@
 
 This repo is a collection of scripts showing how our group members train the models and evaluate the results for MT exercise 5. 
 
-## Group Members:
-
+## Group Members
 Mengjie Wu (22-747-869)
 Ruomeng Xu (22-748-339)
 
