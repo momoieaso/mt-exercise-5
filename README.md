@@ -15,9 +15,7 @@ Ruomeng Xu (22-748-339)
 
     `pip install virtualenv`
 
-## Steps
-
-# Task 1
+### Task 1
 
 Clone the fork of this repository in the desired place:
 
@@ -127,7 +125,7 @@ Then we can get the BLEU scores of three experiments. The summarizing table of t
 | (b) |   yes   |      2000       | 22.7 |
 | (c) |   yes   |      5000       | 23.9 |
 
-Other findings of Task 1 are discussed in the PDF file. (/menwu_moieaso_mt_exercise_05.pdf)
+**Important**:Other findings of Task 1 are discussed in the PDF file. (/menwu_moieaso_mt_exercise_05.pdf)
 
 # Task 2
 
@@ -158,4 +156,4 @@ The graphs are stored in the 'figures' file:
 ![Beam Size vs Translation Time Graph](figures/beam_size_vs_translation_time.png)
 ![Beam Size vs BLEU Score Graph](figures/beam_size_vs_bleu_score.png)
 
-Other findings of Task 2 are discussed in the PDF file. (/menwu_moieaso_mt_exercise_05.pdf)
+**Important**:Other findings of Task 2 are discussed in the PDF file. (/menwu_moieaso_mt_exercise_05.pdf)
